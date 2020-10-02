@@ -22,21 +22,29 @@
             .container {
                 width: 100%;
                 box-sizing: border-box;
-                padding: 16px;
+                padding: 32px;
                 background: white;
                 border-radius: 15px;
-                text-align: center;
+                height: 550px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: stretch;
+                align-content: stretch;
             }
 
             .name {
                 color: black;
                 font-weight: bold;
-                font-size: 70px;
+                font-size: 50px;
+                margin-left: 10px;
             }
 
             .link {
                 color: #4a4a4a;
-                font-size: 40px;
+                font-size: 45px;
+                margin-top: 10px;
             }
 
             .name span {
@@ -44,24 +52,23 @@
             }
 
             .text {
-                text-align: center;
                 display: block;
-                margin-top: 8px;
-                color: #4a4a4a;
+                margin-top: 30px;
+                color: black;
                 font-size: 70px;
+                text-align: center;
             }
 
             .profile {
                 margin-top: 16px;
                 display: flex;
                 align-items: center;
-                justify-content: center;
                 font-size: 30px;
             }
 
             .profileImg {
-                width: 150px;
-                height: 150px;
+                width: 80px;
+                height: 80px;
                 background-image: url("{{imageProfile}}");
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -90,15 +97,18 @@
         </style>
     </head>
     <body>
-        <div style="width: 100%;">
+        <div style="width: 100%">
             <div class="container">
-                <div class="profile">
-                    <div class="profileImg"></div>
+                <div class="text">{{title}}</div>
+
+                <div class="footer">
+                    <div class="profile">
+                        <div class="profileImg"></div>
+                        <div class="name">{{name}}</div>
+                    </div>
+
+                    <div class="link">cafecito.app/{{username}}</div>
                 </div>
-
-                <div class="name">{{name}}</div>
-
-                <div class="link">cafecito.app/{{username}}</div>
             </div>
 
             <div class="logoCafecito">

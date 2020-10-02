@@ -8,7 +8,7 @@
             }
 
             body {
-                background: #c6ddf4;
+                background: #8fa2cc;
                 padding: 0 100px;
                 height: 750px;
                 width: 1500px;
@@ -26,28 +26,25 @@
                 background: white;
                 border-radius: 15px;
                 text-align: center;
+                max-height: 550px;
             }
 
             .name {
-                color: black;
+                color: #000;
                 font-weight: bold;
-                font-size: 70px;
-            }
-
-            .link {
-                color: #4a4a4a;
-                font-size: 40px;
+                font-size: 45px;
             }
 
             .name span {
-                color: #4a4a4a;
+                font-weight: normal;
+                color: #333;
             }
 
             .text {
                 text-align: center;
                 display: block;
                 margin-top: 8px;
-                color: #4a4a4a;
+                color: #333;
                 font-size: 70px;
             }
 
@@ -60,8 +57,8 @@
             }
 
             .profileImg {
-                width: 150px;
-                height: 150px;
+                width: 60px;
+                height: 60px;
                 background-image: url("{{imageProfile}}");
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -74,41 +71,33 @@
                 font-weight: bold;
                 font-size: 36px;
             }
-
-            .logoCafecito {
-                margin-top: 15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .logoCafecito span {
-                margin-left: 15px;
-                font-size: 45px;
-                font-weight: bold;
-            }
         </style>
     </head>
     <body>
         <div style="width: 100%;">
-            <div class="container">
-                <div class="profile">
-                    <div class="profileImg"></div>
+            <div class="container" id="container">
+                <div class="name">
+                    {{nameCoffee}}
+                    <span>
+                        {{countCoffees}}
+                    </span>
                 </div>
-
-                <div class="name">{{name}}</div>
-
-                <div class="link">cafecito.app/{{username}}</div>
+                <span class="text" id="text">{{message}}</span>
             </div>
 
-            <div class="logoCafecito">
-                <img
-                    src="https://cafecito.app/static/imgs/cafecito_logo.svg"
-                    width="80px"
-                    alt=""
-                />
-                <span>Cafecito</span>
+            <div class="profile">
+                <div class="profileImg"></div>
+                <span>{{name}}</span>
             </div>
         </div>
     </body>
+
+    <script>
+        const container = document.getElementById("container");
+        const text = document.getElementById("text");
+
+        if (container.clientHeight >= 550) {
+            text.style.fontSize = "100%";
+        }
+    </script>
 </html>

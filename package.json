@@ -1,9 +1,13 @@
 {
-    "name": "cafecitoogimage",
+    "name": "cafecito-image",
     "version": "1.0.0",
     "description": "",
     "dependencies": {
-        "chrome-aws-lambda": "^5.2.1"
+        "axios": "^0.19.2",
+        "chrome-aws-lambda": "^5.2.1",
+        "handlebars": "^4.7.6",
+        "micro": "^9.3.4",
+        "twemoji": "^13.0.1"
     },
     "devDependencies": {
         "nodemon": "^2.0.4",
@@ -11,6 +15,7 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "micro ./api/**",
         "dev": "nodemon server.js"
     },
     "author": "",
