@@ -4,13 +4,13 @@ const { getHtmlPost } = require("../_lib/template");
 const axios = require("axios");
 
 const getPost = async (id) => {
-    const result = await axios(`https://ci.cafecito.app/api/user/post/${id}`);
+    const result = await axios(`https://cafecito.app/api/user/post/${id}`);
 
     return result.data;
 };
 
 const getUser = async (userId) => {
-    const result = await axios(`https://ci.cafecito.app/api/user_id/${userId}`);
+    const result = await axios(`https://cafecito.app/api/user_id/${userId}`);
 
     return result.data;
 };
